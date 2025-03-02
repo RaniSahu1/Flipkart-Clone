@@ -1,6 +1,14 @@
 /* By default, Bootstrap dropdowns open on click. To open them on hover, add this CSS:
  */
 
+ @media screen and (min-width: 1024px) {
+    .bb {
+      max-width: 1000px;
+      overflow-x: hidden;
+    }
+    
+  }
+
  .navbar .dropdown:hover .dropdown-menu {
     display: block;
 }
