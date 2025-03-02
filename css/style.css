@@ -1,0 +1,643 @@
+/* By default, Bootstrap dropdowns open on click. To open them on hover, add this CSS:
+ */
+
+ .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar {
+    padding: 5px;
+    height: 45px;
+    background-color: white;
+}
+
+.logo{
+    margin-left: 0px !important; 
+}
+
+.search{
+
+         /* Light gray border */
+        border-radius: 5px; /* Rounded corners */
+        padding: 0px; /* Adjust padding */
+  
+  background-color:#E0F3FF;
+  opacity: 25;
+  width: 500px !important;
+    }
+
+.search2{
+    font-size: 10px !important;
+    font-weight: 500;
+    width: 500px !important;
+}    
+
+.one{
+    background-color:#E0F3FF !important;
+    opacity: 25;
+}
+   
+
+::placeholder {
+    font-size: 12px; 
+}
+
+.login{
+    margin-right: 100px !important;
+    margin-top:6px !important;
+    font-size: 12px !important;
+    font-family: helvectica;
+}
+
+
+/* Login Button Styling */
+.login-btn {
+    background-color: white; /* Default white background */
+    color: black;
+    border: 1px solid #d9d9d9;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    font-weight: 500;
+   
+}
+
+/* Hover Effect */
+.login-btn:hover {
+    background-color: #2874f0 !important; /* Flipkart blue */
+    color: white !important;
+}
+
+/* Profile Image on Left */
+.profile-icon {
+    width: 15px; /* Adjust size */
+    height: 15px;
+    transition: filter 0.3s ease-in-out;
+}
+
+
+/* Dropdown Arrow Image on Right */
+.dropdown-icon {
+    width: 8px; /* Adjust size */
+    height: 8px;
+    margin-left: auto; /* Pushes to right */
+    transition: filter 0.3s ease-in-out;
+}
+
+.login-btn:hover .profile-icon,
+.login-btn:hover .dropdown-icon {
+    filter: brightness(0) invert(1); /* Makes images white */
+}
+
+
+.login-btn::after {
+    display: none !important; /* Hides Bootstrap's default caret */
+}
+
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    min-width: 180px;
+    margin-top: -8px !important;
+    top: 100% !important; /* Ensure it aligns right under the button */
+    transform: translateY(8px); /* Move dropdown slightly up */
+
+}
+.dropdown-item {
+    font-size: 11px;
+    font-family: sans-serif;
+}
+   
+.dropdown-divider {
+    margin: 5px 0;
+}
+    
+.profile{
+    margin-top: -4px;
+    margin-left: -15px !important;
+    font-size: 10px;
+    font-family: sans-serif;
+}
+    
+/* Style for search bar */
+.input-group-text {
+    padding: 0.5rem;
+}
+
+
+/* Dropdown styling */
+.search-dropdown {
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1050;
+    max-width: 500px;
+}
+
+/* Style for suggestion items */
+.list-group-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.cart{
+    font-size: 12 !important;
+    gap: 3px;
+    font-family: sans-serif;
+  
+}
+.cart1{
+    margin-left: -10px;
+    flex-direction: left;
+    flex: 1;
+
+}
+
+.dropdown-toggle::after{
+    display: none !important;
+}
+
+.seller{
+    position: relative;
+    margin-right: 25px;
+    
+}
+.seller2{
+    font-size: 11 !important;
+}
+.dot{
+    margin-top: -10px;
+    margin-right: 20px;
+    margin-left: -10px;
+}
+
+.dot2{
+    right: 0 !important;  /* Remove right alignment */
+    left: auto !important;      /* Force it to align left */
+    
+}
+
+
+
+                                                                /* another Navbar */
+
+.main-navbar {
+    background-color: white;
+    padding: 10px ;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    height: 200px;
+    margin-top: 100px;
+}
+
+ul{
+   list-style-type: none; 
+}
+.outer{
+    margin-top: 50px;
+    height: 85px;
+    border: 1px solid white;
+   
+}
+
+.kilos{
+    font-size: 11 !important;
+    margin-top: -15px !important;
+    gap: 3px;
+    width: auto;
+    align-items: center;
+    flex: 1;
+  font-family: poppins;
+}
+
+.nohover:hover {
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding-right: 8;
+    padding-left: 8;
+    margin-top: 5px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 10px;
+    display: block;
+    
+}
+
+
+
+.liSize1{
+  font-size: 10px !important;
+}
+.liSize{
+  font-size: 10px !important;
+  margin-left: -30px !important;
+  margin-top: 3px !important;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    position: relative;
+    margin-top: -8px !important;
+
+}
+
+/* Submenu (Dropleft) */
+.submenu {
+    position: absolute !important;
+    top:0% !important;
+    left: 100%;
+    background: white;
+    /* border: 1px solid #ddd; */
+    display: none;
+    min-width: 140px !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    list-style-type: none !important;
+    /* transform: translateY(-50%); */
+     z-index: 1000;/* Ensure submenu stays on top */
+}
+.has-submenu {
+    position: relative; /* Ensures submenu positions relative to this */
+}
+
+/* Show the image when hovering */
+.has-submenu:hover img {
+    display: inline-block;
+}
+
+
+/* Show the submenu when hovering */
+.has-submenu:hover > .submenu {
+    display: block;
+}
+/* Change background color on hover */
+.has-submenu:hover > a {
+    background-color: #99dde9;
+    color: rgb(10, 9, 9);
+    transition: 0.3s;
+    border-radius: 3;
+    font-weight: 500;
+}
+
+/* Initially hide the image */
+.has-submenu img {
+    display: none;
+   
+}
+
+/* Instant background color change */
+.has-submenu:hover > a {
+    background-color:#d4e1e3  !important;
+    color: rgb(10, 9, 9);
+    border-radius: 3px;
+    font-weight: 500;
+    transition: none; /* Remove delay */
+}
+
+/* Make submenu text bold on hover */
+.submenu li a:hover {
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.nav-links a:hover,
+.dropdown-menu a:hover {
+    background-color: #f8f8f8;
+}
+
+.fashion {
+    cursor: pointer;
+    font-size: 11px;
+    transition: all color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* Hover effect */
+.fashion:hover {
+    color: blue;
+}
+
+.fashion:hover .fash1 {
+    opacity: 0;
+}
+
+.fashion:hover .fash2 {
+    opacity: 1;
+}
+
+/* Ensure second image rotates properly */
+.fash2 {
+    transform: rotate(180deg);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Make sure the wrapper aligns images properly */
+.wrapper {
+    display: inline-block;
+    position: relative;
+    width: 10px; /* Adjust size based on your requirement */
+    height: 10px;
+    top: 0;
+}
+
+.wrapper img {
+    position: absolute;
+    top: -1;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+/* Change image color to blue on hover */
+.fashion:hover .wrapper img {
+    filter: invert(30%) sepia(200%) saturate(500%) hue-rotate(200deg);
+}
+
+/*=========================Slider===============================================*/
+
+
+  .carousel {
+    max-width: 1000px; /* Adjust width */
+    margin-left: 10px !important;
+    margin: 8px; /* Center */
+  }
+
+  .carousel-inner img {
+    border-radius: 2px !important; /* Slightly rounded corners */
+    margin-top: 0 !important;
+    height: 160px;
+  }
+
+  .custom-btn {
+    background-color: white !important; /* White button background */
+    border-radius: 5px; /* Slightly rounded buttons */
+    width: 30px !important;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+    margin: auto;
+    color: black;
+  }
+
+  .custom-btn span {
+     filter: invert(100%); /*Make the arrow visible on white */
+    
+  }
+
+  .shadow {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+
+  .small-arrow {
+    width: 10px !important;
+    height: 10px !important;
+    
+}
+
+.carousel-indicators button {
+    width: 8px !important;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgb(180, 170, 170) !important;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    bottom: -18px !important;
+    overflow: hidden;
+  }
+
+  .carousel-indicators .active {
+    background-color: transparent;
+    width: 24px !important;
+    height: 4px;
+    border-radius: 15px;
+  }
+
+  .carousel-indicators .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: black; /* Fill color */
+    animation: fillIndicator 4s linear forwards;
+  }
+
+  @keyframes fillIndicator {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /*==========================Hero-1=====================*/
+
+  
+.custom-slider-container {
+    position: relative;
+    width: 700px;
+    overflow: hidden;
+   margin-left: 10px;
+   margin-top: 4px; 
+   background-color: white;
+   height: 220px;
+}
+.custom-slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: max-content;
+    position: relative;
+    background-color: white;
+    
+}
+.custom-slide {
+    width: 145px;
+    height: 100px;
+    background-color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    border: none;
+   
+}
+
+.tshirt{
+    font-size: 10px;
+    font-weight: 400;
+}
+.button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(223, 209, 209);
+    color: rgb(4, 4, 4);
+    border: none;
+    padding: 22px 8px;
+    
+    cursor: pointer;
+    border-radius: 5px 0px 0px 5px;
+    z-index: 1000;
+}
+.button:disabled {
+    display: none;
+    
+}
+.custom-prev {
+     left: 0px;
+     border-radius: 0px 5px 5px 0px !important;
+ }
+.custom-next { right: 0px; }
+
+.custom-slide img {
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.custom-slide img:hover {
+    transform: scale(1.1); /* Slightly zoom in the image */
+}
+
+
+.airIndia{
+    height: 230px;
+    width: 150px;
+    margin: 6px;
+    margin-top: 0px;
+}
+
+/* hero-2 */
+
+.new-slider-container {
+    position: relative;
+    width: 1000px;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-top: 0px;
+    background-color: white;
+    height: 220px;
+}
+
+.new-slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: max-content;
+    position: relative;
+    background-color: white;
+}
+
+.new-slide {
+    width: 145px;
+    height: 100px;
+    background-color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-right: 2px solid #ddd;
+    margin-top: 20px;
+    border: none;
+}
+
+/* Hover Zoom Effect */
+.new-slide img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.new-slide img:hover {
+    transform: scale(1.1);
+}
+
+.new-prev, .new-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(194, 184, 184, 0.983);
+    color: rgb(7, 6, 6);
+    border: none;
+    padding: 22px 8px;
+    cursor: pointer;
+    
+}
+
+.new-prev { left: 0px;
+border-radius: 0px 5px 5px 0px !important;
+}
+.new-next { right: 0px; 
+border-radius: 5px 0px 0px 5px;
+}
+.new-prev:disabled, .new-next:disabled { display: none; }
+
+
+/* hero-3 */
+
+.hero31{
+    max-width: 1000px;
+    
+}
+
+/* hero-4 */
+
+.hero4{
+    height: 425px;
+    width: 340px;
+   }
+
+.hero41{
+    transition: transform 0.2s ease-in-out;
+}   
+.hero41:hover{
+    transform: scale(1.05);
+} 
+
+.footer{
+    font-size: 8;
+    color: rgb(250, 245, 245);
+    font-weight: 500;
+}
+
+.footer:hover{
+    text-decoration: underline !important;
+    text-decoration-thickness: 1px !important;
+}
+.footer0{
+    font-size: 8;
+    color: rgb(250, 245, 245);
+    font-weight: 400;
+}
