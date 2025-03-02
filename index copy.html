@@ -47,902 +47,904 @@ dropdown.classList.add("d-none");
 
 
 </head>
-<body class="bg-light">
+<body class="bg-light ">
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light  fixed-top shadow-sm">
-<div class="container-fluid ">
-<!-- Flipkart Logo -->
-<a class="navbar-brand fw-bold text-primary logo " href="#">
-<img src="./images/logo.svg" alt="" height="60" width="110" class="mx-2 ">
-</a>
-
-<!-- Toggle Button for Small Screens -->
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-<span class="navbar-toggler-icon"></span>
-</button>
-
-<div class="collapse navbar-collapse" id="navbarNav">
-<div class="d-flex flex-column flex-lg-row w-100 justify-content-between align-items-center">
-
-
-<!-- Search Bar with Dropdown Suggestions -->
-<div class="position-relative w-75 h-25 p-0 mt-4 mb-4">
-<div class="input-group search">
-<!-- Search Icon Inside Input -->
-<span class="input-group-text one border-0 p-1 mx-1 ">
-<img src="./images/search.svg" alt="Search" height="15" width="15" >
-</span>
-<input class="form-control border-0 shadow-none font p-0 mb-1 one" type="search" id="searchInput" placeholder="Search for Products, Brands and More" onfocus="showDropdown()" onkeyup="filterSuggestions()">
-</div>
-
-<!-- Dropdown for Search Suggestions -->
-<div class="search-dropdown position-absolute w-100  bg-white shadow d-none" id="searchDropdown">
-<p class=" fw-bolder  px-3 pt-2 mb-1 text-muted" style="font-size: 10px; ">Discover More</p>
-<ul class="list-group list-unstyled" id="suggestionList">
-<li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > shoes</li>
-<li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > mobiles</li>
-<li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > t shirts</li>
-<li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > laptops</li>
-<li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > watches</li>
-<li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > tv</li>
-<li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > sarees</li>
-</ul>
-</div>
-</div>
-
-
-<!-- Navbar Items -->
-<ul class="navbar-nav mt-3 " style="position: relative;">
-<!-- Login Dropdown -->
-<div class="dropdown login-dropdown col-lg-10" style="position: absolute; left: -40%; top:-70%;; transform: translateX(-50%);">
-    <button class="btn login-btn dropdown-toggle login btn-sm " type="button" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" >
-        <img src="./images/login.svg" alt="Profile" class="profile-icon"> <!-- Left Profile Image -->
-        Login
-        <img src="./images/dropdown.svg" alt="Dropdown" class="dropdown-icon"> <!-- Right Dropdown Image -->
-    </button>
-    
-    <!-- Dropdown Menu -->
-    <ul class="dropdown-menu border-0 shadow rounded " aria-labelledby="loginDropdown">
-        <div class="d-flex my-2" >
-            <li><a class="dropdown-item" href="#">New Customer?</a></li>
-        <li><a class="dropdown-item text-primary fw-bold" href="#">Sign Up</a></li>
-        </div>
-        <li><hr class="dropdown-divider"></li> <!-- Divider -->
-        <li class="d-flex mx-2 my-3 z-0" style="margin-top: 5px !important;"  >
-            <img src="./images/login.svg" alt="" height="15" width="15" class="mx-1 ">
-            <a class="dropdown-item profile z-n1 " href="#">My Profile</a>
-        </li>
-        <li class="d-flex mx-2 my-3 z-0 "  >
-            <img src="./images/fpluszone.svg" alt="" height="15" width="15" class="mx-1 ">
-            <a class="dropdown-item profile z-n1 " href="#">Flipkart Plus Zone</a>
-        </li>
-        <li class="d-flex mx-2 my-3 z-0 "  >
-            <img src="./images/orders.svg" alt="" height="15" width="15" class="mx-1 ">
-            <a class="dropdown-item profile z-n1 " href="#">Orders</a>
-        </li>
-        <li class="d-flex mx-2 my-3 z-0 "  >
-            <img src="./images/whishlist.svg" alt="" height="15" width="15" class="mx-1 ">
-            <a class="dropdown-item profile z-n1 " href="#">Whishlist</a>
-        </li>
-        <li class="d-flex mx-2 my-3 z-0 "  >
-            <img src="./images/rewards.svg" alt="" height="15" width="15" class="mx-1 ">
-            <a class="dropdown-item profile z-n1 " href="#">Rewards</a>
-        </li>
-        <li class="d-flex mx-2 my-3 z-0 " style="margin-bottom: 0px !important;" >
-            <img src="./images/giftcard.svg" alt="" height="15" width="15" class="mx-1 ">
-            <a class="dropdown-item profile z-n1 " href="#">Gift Cards</a>
-        </li>
-
-    </ul>
-</div>
-
-<!-- Cart -->
-<li class="nav-item mr-5 cart1 "   style="position: absolute; left: -18%;top:-10; transform: translateX(-50%);">
-    <a class="nav-link text-dark cart d-flex" href="#">
-        <img src="./images/cart.svg" alt="" height="15" width="15">
-        <i class="bi bi-cart "></i> Cart
-    </a>
-</li>
-
-<!-- Become a Seller -->
-<li class="nav-item seller" style="margin-top: -10; " >
-    <a class="nav-link text-dark cart d-flex seller2 " href="#">
-        <img src="./images/seller.svg" alt="" height="15" width="15">
-        <i class="bi bi-cart"></i> Become a Seller
-    </a>
-</li>
-
-<!-- 3 Dots Dropdown -->
-<li class="nav-item dropdown dot " >
-    <a class="nav-link dropdown-toggle text-dark" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown">
-        <img src="./images/3dot.svg" alt="" height="15" width="15">
-    </a>
-    <ul class="dropdown-menu dot2 shadow border-0 ">
-        <li><a class="dropdown-item" href="#">Notifications</a></li>
-        <li><a class="dropdown-item" href="#">Customer Support</a></li>
-        <li><a class="dropdown-item" href="#">Settings</a></li>
-    </ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</nav>
-
-
-<!-- another navbar  -->
-
-<div class=" container-fluid">
-<nav class="main-navbar container outer shadow text-center col-12 d-flex justify-content-center ">
-<ul class="nav-links ">
-<li ><a href="#" class="kilos d-flex flex-column justify-content-center nohover">
-<img src="./images/kilos.png" alt="" height="45" width="45">
-kilos</a></li>
-<li><a href="#" class="kilos d-flex flex-column justify-content-center nohover">
-<img src="./images/mobiles.png" alt="" height="45" width="45">
-Mobiles</a></li>
-
-<!-- Fashion Dropdown -->
-<li class="dropdown">
-<a href="#" class="kilos d-flex flex-column justify-content-center nohover fashion">
-<img src="./images/fashion.png" alt="" height="45" width="45">
-<div class="d-flex align-items-center fashion" style="position: relative;">
-    <span >Fashion</span>
-    <div class="wrapper">
-        <img src="./images/dropdown.svg" alt="" height="10" width="10" class="my-1 mx-1 fash1">
-        <img src="./images/dropdown.svg" alt="" height="10" width="10" class="my-1 mx-1 fash2">
-    
-    </div>
-    </div> </a>
-<ul class="dropdown-menu border-0  bg-light drop" style="margin-top: 15 !important;">
-<li class="has-submenu position-relative">
-<a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 my-1">
-    <span>Men's Top Wear</span> 
-    <img src="./images/dropleft.svg" alt="" width="10" height="10">
-</a>
-<ul class="submenu  bg-light" >
-    <li ><a href="#" class="liSize fw-bold">More in Men's Top wear</a></li>
-    <li><a href="#" class="liSize">All</a></li>
-    <li><a href="#" class="liSize">T-shirt</a></li>
-    <li><a href="#" class="liSize">Formal shirts</a></li>
-    <li><a href="#" class="liSize">Kurtas</a></li>
-    <li><a href="#" class="liSize">Ethnic Sets</a></li>
-</ul>
-</li>
-<li class="has-submenu position-relative">
-<a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
-    <span>Men's bottom Wear</span>
-    <img src="./images/dropleft.svg" alt="" width="10" height="10">
- </a>
-<ul class="submenu  bg-light" >
-    <li ><a href="#" class="liSize fw-bold">More in Men's Bottom wear</a></li>
-    <li><a href="#" class="liSize">All</a></li>
-    <li><a href="#" class="liSize">Jeans</a></li>
-    <li><a href="#" class="liSize">Trousers</a></li>
-    <li><a href="#" class="liSize">Trackpants</a></li>
-    <li><a href="#" class="liSize">Shorts</a></li>
-    <li><a href="#" class="liSize">Cargos</a></li>
-</ul>
-</li>
-<li class="has-submenu position-relative">
-<a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
-   <span> Women Ethnic </span>
-    <img src="./images/dropleft.svg" alt="" width="10" height="10">
-</a>
-<ul class="submenu  bg-light" >
-    <li ><a href="#" class="liSize fw-bold">More in Women etnic</a></li>
-    <li><a href="#" class="liSize">All</a></li>
-    <li><a href="#" class="liSize">Sarees</a></li>
-    <li><a href="#" class="liSize">Kurtas & kurtis</a></li>
-    <li><a href="#" class="liSize">Gowns</a></li>
-    <li><a href="#" class="liSize">Dupatta</a></li>
-</ul>
-</li>
-<li class="has-submenu position-relative">
-<a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
-   <span> Kids</span>
-    <img src="./images/dropleft.svg" alt="" width="10" height="10">
- </a>
-<ul class="submenu  bg-light" >
-    <li ><a href="#" class="liSize fw-bold">More in kids</a></li>
-    <li><a href="#" class="liSize">All</a></li>
-    <li><a href="#" class="liSize">Dresses</a></li>
-    <li><a href="#" class="liSize">Infant Wear</a></li>
-    <li><a href="#" class="liSize">Kids Sports Shoes</a></li>
-    <li><a href="#" class="liSize">Shorts</a></li>
-</ul>
-</li>
-<li class="has-submenu position-relative">
-<a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
-     <span>Winter </span>
-     <img src="./images/dropleft.svg" alt="" width="10" height="10">
-    </a>
-<ul class="submenu  bg-light" >
-    <li ><a href="#" class="liSize fw-bold">More in Winter</a></li>
-    <li><a href="#" class="liSize">All</a></li>
-    <li><a href="#" class="liSize">Jacket</a></li>
-    <li><a href="#" class="liSize">Sweatshirts</a></li>
-    <li><a href="#" class="liSize">Shrugs</a></li>
-    <li><a href="#" class="liSize">Thermals</a></li>
-</ul>
-</li>
-<li class="has-submenu position-relative">
-<a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
-   <span> Women Western</span>
-    <img src="./images/dropleft.svg" alt="" width="10" height="10">
- </a>
-<ul class="submenu  bg-light" >
-    <li ><a href="#" class="liSize fw-bold">More in Women Western</a></li>
-    <li><a href="#" class="liSize">All</a></li>
-    <li><a href="#" class="liSize">Boxers</a></li>
-    <li><a href="#" class="liSize">Vests</a></li>
-    <li><a href="#" class="liSize">Innerwear</a></li>
-    <li><a href="#" class="liSize">slippers Flip</a></li>
-</ul>
-</li>
-
-</ul>
-</li>
-
-<!-- Electronics Dropdown -->
-<li class="dropdown">
-    <a href="#" class="kilos d-flex flex-column justify-content-center nohover fashion">
-    <img src="./images/Electronics.png" alt="" height="45" width="45">
-    <div class="d-flex align-items-center fashion" style="position: relative;">
-        <span >Electronics</span>
-        <div class="wrapper">
-            <img src="./images/dropdown.svg" alt="" height="10" width="10" class="my-1 mx-1 fash1">
-            <img src="./images/dropdown.svg" alt="" height="10" width="10" class="my-1 mx-1 fash2">
+<div style="overflow-x: hidden;">
+    <nav class="navbar navbar-expand-lg navbar-light  fixed-top shadow-sm">
+        <div class="container-fluid ">
+        <!-- Flipkart Logo -->
+        <a class="navbar-brand fw-bold text-primary logo " href="#">
+        <img src="./images/logo.svg" alt="" height="60" width="110" class="mx-2 ">
+        </a>
         
-        </div>
-        </div> </a>
-    <ul class="dropdown-menu border-0  bg-light drop" style="margin-top: 15 !important;">
-    <li class="has-submenu position-relative">
-    <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 my-1">
-        <span>Audio</span> 
-        <img src="./images/dropleft.svg" alt="" width="10" height="10">
-    </a>
-    <ul class="submenu  bg-light" >
-        <li ><a href="#" class="liSize fw-bold">More in Audio</a></li>
-        <li><a href="#" class="liSize">All</a></li>
-        <li><a href="#" class="liSize">Bluetooth Headphones</a></li>
-        <li><a href="#" class="liSize">Soundbar</a></li>
-        <li><a href="#" class="liSize">Wired Headphones</a></li>
-        <li><a href="#" class="liSize">Home Theartre</a></li>
-        <li><a href="#" class="liSize">True WireLess Headphones</a></li>
-    </ul>
-    </li>
-    <li class="has-submenu position-relative">
-    <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
-        <span>Games</span>
-        <img src="./images/dropleft.svg" alt="" width="10" height="10">
-     </a>
-    <ul class="submenu  bg-light" >
-        <li ><a href="#" class="liSize fw-bold">More in Games</a></li>
-        <li><a href="#" class="liSize">All</a></li>
-        <li><a href="#" class="liSize">Mouse</a></li>
-        <li><a href="#" class="liSize">Keyboards</a></li>
-        <li><a href="#" class="liSize">Gamepads</a></li>
-        <li><a href="#" class="liSize">Games</a></li>
-        <li><a href="#" class="liSize">Controllers</a></li>
-    </ul>
-    </li>
-    <li class="has-submenu position-relative">
-    <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
-       <span> Powerbank </span>
-        <img src="./images/dropleft.svg" alt="" width="10" height="10">
-    </a>
-    <ul class="submenu  bg-light" >
-        <li ><a href="#" class="liSize fw-bold">More in Powerbank</a></li>
-        <li><a href="#" class="liSize">All</a></li>
-        <li><a href="#" class="liSize">Powerbank</a></li>
+        <!-- Toggle Button for Small Screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+        </button>
         
-    </ul>
-    </li>
-    <li class="has-submenu position-relative">
-    <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
-       <span>Smart Wearables</span>
-        <img src="./images/dropleft.svg" alt="" width="10" height="10">
-     </a>
-    <ul class="submenu  bg-light" >
-        <li ><a href="#" class="liSize fw-bold">More in Smart Wearables</a></li>
-        <li><a href="#" class="liSize">All</a></li>
-        <li><a href="#" class="liSize">Smart Watches </a></li>
-        <li><a href="#" class="liSize">Smart bands</a></li>
-        <li><a href="#" class="liSize">Smart Glasses</a></li>
-        <li><a href="#" class="liSize">Smart Rings</a></li>
-        <li><a href="#" class="liSize">Smart Rings</a></li>
-        <li><a href="#" class="liSize">Smart Trackers</a></li>
-    </ul>
-    </li>
-    <li class="has-submenu position-relative">
-    <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
-         <span>Storage </span>
-         <img src="./images/dropleft.svg" alt="" width="10" height="10">
-        </a>
-    <ul class="submenu  bg-light" >
-        <li ><a href="#" class="liSize fw-bold">More in Storage</a></li>
-        <li><a href="#" class="liSize">All</a></li>
-        <li><a href="#" class="liSize">Memory cards</a></li>
-        <li><a href="#" class="liSize">Pendrive</a></li>
-        <li><a href="#" class="liSize">Hard Drive</a></li>
-        <li><a href="#" class="liSize">Hard Disk</a></li>
-    </ul>
-    </li>
-    <li class="has-submenu position-relative">
-    <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
-       <span> Tablets</span>
-        <img src="./images/dropleft.svg" alt="" width="10" height="10">
-     </a>
-    <ul class="submenu  bg-light" >
-        <li ><a href="#" class="liSize fw-bold">More in Tablets</a></li>
-        <li><a href="#" class="liSize">All</a></li>
-        <li><a href="#" class="liSize">Tablets</a></li>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="d-flex flex-column flex-lg-row w-100 justify-content-between align-items-center">
         
-    </ul>
-    </li>
-    
-    </ul>
-    </li>
-<!-- Home and furnitur  -->
-<li class="dropdown">
-<a href="#" class="kilos d-flex flex-column justify-content-center nohover">
-<img src="./images/home&furniture.jpeg" alt="" height="45" width="45">
-Home &Furniture</a>
-<ul class="dropdown-menu">
-<li class="has-submenu">
-<a href="#">Mobiles ▸</a>
-<ul class="submenu">
-    <li><a href="#">Samsung</a></li>
-    <li><a href="#">Apple</a></li>
-    <li><a href="#">OnePlus</a></li>
-</ul>
-</li>
-<li><a href="#">Laptops</a></li>
-<li><a href="#">Tablets</a></li>
-</ul>
-</li>
-
-<li><a href="#" class="kilos d-flex flex-column justify-content-center nohover">
-<img src="./images/appliances.jpeg" alt="" height="45" width="45">
-Appliances</a></li>
-<li><a href="#" class="kilos d-flex flex-column justify-content-center nohover">
-<img src="./images/flight.png" alt="" height="45" width="45">
-Flight Bookings</a></li>
-
-
-<!-- Toys & More Dropdown -->
-<li class="dropdown">
-<a href="#" class="kilos d-flex flex-column justify-content-center nohover">
-<img src="./images/beauty,toys&more.png" alt="" height="45" width="45">
-Beauty,Toys&More </a>
-<ul class="dropdown-menu">
-<li class="has-submenu">
-<a href="#" class="kilos">Beauty ▸</a>
-<ul class="submenu">
-    <li><a href="#">Makeup</a></li>
-    <li><a href="#">Skincare</a></li>
-</ul>
-</li>
-<li><a href="#" >Toys</a></li>
-<li><a href="#">Stationery</a></li>
-</ul>
-</li>
-<!-- two wheelers  -->
-<li class="dropdown">
-<a href="#" class="kilos d-flex flex-column justify-content-center nohover">
-<img src="./images/twoWheelers.png" alt="" height="45" width="45">
-Two Wheelers </a>
-<ul class="dropdown-menu">
-<li class="has-submenu">
-<a href="#" class="kilos">Beauty ▸</a>
-<ul class="submenu">
-    <li><a href="#">Makeup</a></li>
-    <li><a href="#">Skincare</a></li>
-</ul>
-</li>
-<li><a href="#" >Toys</a></li>
-<li><a href="#">Stationery</a></li>
-</ul>
-</li>
-
-
-</ul>
-</div>
-</nav>
-
-<!--Slider-->
-
-<div id="carouselExampleIndicators" class="carousel slide shadow px-1 pb-3 bg-white " data-bs-ride="carousel" data-bs-interval="4000">
-  
-    <!-- Indicators (dots) -->
-    <div class="carousel-indicators ">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 3"></button>
-    </div>
-  
-    <!-- Carousel Images -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./images/slider7.jpeg" class="d-block w-100  rounded" alt="Technology">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/slider8.jpeg" class="d-block w-100  rounded" alt="Fashion">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/slider2.jpeg" class="d-block w-100  rounded" alt="Nature">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/slider3.jpeg" class="d-block w-100  rounded" alt="Nature">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/slider4.jpeg" class="d-block w-100  rounded" alt="Nature">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/slider5.jpeg" class="d-block w-100  rounded" alt="Nature">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/slider6.jpeg" class="d-block w-100  rounded" alt="Nature">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/slider1.jpeg" class="d-block w-100  rounded" alt="Nature">
-      </div>
-      
-    </div>
-
-  
-    <!-- Navigation Buttons -->
-    <button class="carousel-control-prev custom-btn " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon small-arrow" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next custom-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon small-arrow" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
- 
-<!-- Hero-1   -->
-<div class="d-flex flex-lg-row mx-1">
-<div class="custom-slider-container col-md-10 shadow">
-    <span style="font-weight: 600; display: block; margin-top: 10px;" class="mx-3 " >499 only</span>
-    <button id="prev-button" class="button custom-prev" disabled>
-        <img src="./images/dropleft.svg" alt="" height="12" width="12" style="rotate: 180deg;">
-    </button>
-    <div class="custom-slider">
-        <div class="custom-slide d-flex flex-column align-items-center ">
-            <img src="./images/ladka.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">T-shirt,Shirt,Jean... <br> <b>Under ₹499</b></span>
-        </div>
-        <div class="custom-slide d-flex flex-column align-items-center ">
-            <img src="./images/jute1.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Top Offers <br> <b>Under ₹499</b></span>
-        </div>
-        <div class="custom-slide d-flex flex-column align-items-center ">
-            <img src="./images/sareewali.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Best Sellig Sarees <br> <b>Under ₹499</b></span>
-        </div>
-        <div class="custom-slide d-flex flex-column align-items-center ">
-            <img src="./images/jute2.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Reebok,HRX.. <br> <b>Min. 70% off</b></span>
-        </div>
-        <div class="custom-slide d-flex flex-column align-items-center ">
-            <img src="./images/ladki.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Tokyo Talkies, Sassa <br> <b>Under ₹499</b></span>
-        </div>
-        <div class="custom-slide d-flex flex-column align-items-center ">
-            <img src="./images/pursewali.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Trendy Handbags <br> <b>Under ₹499</b></span>
-        </div>
-        <div class="custom-slide d-flex flex-column align-items-center ">
-            <img src="./images/belt.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Accesories Combo <br> <b>Under ₹499</b></span>
-        </div>
-        <div class="custom-slide d-flex flex-column align-items-center ">
-            <img src="./images/ghadi.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Provogue,Killer&M... <br> <b>Under ₹499</b></span>
-        </div>
         
-    </div>
-    
-    <button id="next-button" class="button custom-next">
-        <img src="./images/dropleft.svg" alt="" height="12" width="12"></button>
-</div>
-<!--airIndia img-->
- 
-<img src="./images/airIndia.jpeg" alt=""  class="airIndia" >
-
-</div>
-
-<!-- hero-2 -->
-
-<div class="new-slider-container  shadow">
-    <span style="font-weight: 600; display: block; margin-top: 10px;" class="mx-3">
-        Best Deals on Smartphones</span>
-    <button id="new-prev-button" class="button new-prev" disabled>
-        <img src="./images/dropleft.svg" alt="" height="12" width="12" style="rotate: 180deg;">
-    </button>
-    <div class="new-slider">
-        <div class="new-slide d-flex flex-column align-items-center">
-            <img src="./images/mobile1.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Motorola Edge 50 pr... <br> <b>Just ₹20,999*</b></span>
-        </div>
-        <div class="new-slide d-flex flex-column align-items-center">
-            <img src="./images/mobile2.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Vivo T3 5G <br> <b>From ₹16,999*</b></span>
-        </div>
-        <div class="new-slide d-flex flex-column align-items-center">
-            <img src="./images/mobile3.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">CMF Phone1(8GB) <br> <b>Just ₹12,999*</b></span>
-        </div>
-        <div class="new-slide d-flex flex-column align-items-center">
-            <img src="./images/mobile4.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">moto g35 5G <br> <b>From ₹9,999*</b></span>
-        </div>
-        <div class="new-slide d-flex flex-column align-items-center">
-            <img src="./images/mobile5.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2"> moto g64 5G<br> <b>Just ₹12,999*</b></span>
-        </div>
-        <div class="new-slide d-flex flex-column align-items-center">
-            <img src="./images/mobile6.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Nothing Phone 2a <br> <b>From ₹21,999*</b></span>
-        </div>
-        <div class="new-slide d-flex flex-column align-items-center">
-            <img src="./images/mobile7.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Realme P1 5g <br> <b>From ₹13,999*</b></span>
-        </div>
-        <div class="new-slide d-flex flex-column align-items-center">
-            <img src="./images/mobile8.jpeg" alt="" height="105" width="80">
-            <span class="tshirt my-2">Poco M7 pro 5G <br> <b>From ₹13,999*</b></span>
-        </div>
-    </div>
-    <button id="new-next-button" class="button new-next">
-        <img src="./images/dropleft.svg" alt="" height="12" width="12">
-    </button>
-</div>
-
-<!-- hero-3 -->
-
-<div class="container-fluid hero31 d-flex shadow my-2">
-    <div class="col-4">
-        <a href="#">
-            <img src="./images/hero31.jpeg" alt="" width="320">
-        </a>
-    </div>
-    <div class="col-4">
-        <a href="#">
-            <img src="./images/hero32.jpeg" alt="" width="320">
-        </a>
-    </div>
-    <div class="col-4">
-        <a href="#">
-            <img src="./images/hero33.jpeg" alt="" width="325">
-        </a>
-    </div>
-</div>
-
-<!-- hero-4 -->
-<div class="container-fluid d-flex bg-light">
-    <div class="col-4 hero4 shadow rounded-0" style="margin-right: 3px; margin-left: -6px; background-color: white;">
-        <a href="#" class="link-underline link-underline-opacity-0">
-           <div class="d-flex flex-lg-row mx-3 py-3 align-items-center justify-content-between" >
-            <span style="font-size: 17px; font-weight: 500; color: black;">Season's Top Pics</span>
-            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 15px; height: 15px; ">  
-                 <img src="./images/dropleft.svg" alt="" height="12" width="12" style="filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(1.5);
-            "></div>
-           </div>
-
-           <div class="row row-cols-2 align-items-center justify-content-center ">
-            <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; padding-bottom: 5px !important;">
-                <img src="./images/season1.jpeg" alt="" height="110" width="80" class="hero41">
-                <span class="pt-2 " style="font-size: 12px; color: black; ">Dry Fruit, Nut & Seed <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 50% off</b></span>
-            </div>
-            <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; padding-bottom: 5px !important;">
-                <img src="./images/season2.jpeg" alt="" height="110" width="80" class="hero41">
-                <span class="pt-2 " style="font-size: 12px; color: black; ">Clocks <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 50% off</b></span>
-            </div>
-            <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
-                <img src="./images/season3.jpeg" alt="" height="110" width="80" class="hero41">
-                <span class="pt-2 " style="font-size: 12px; color: black; ">Women's Sarees <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Grab Or Gone</b></span>
-            </div>
-            <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
-                <img src="./images/season4.jpeg" alt="" height="110" width="80" class="hero41">
-                <span class="pt-2 " style="font-size: 12px; color: black; ">Women's Gowns <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Grab Or Gone</b></span>
-            </div>
-           </div>
-        </a>
-    </div>
-    <div class="col-4 hero4 shadow  rounded-0" style="margin-left: 4px; margin-right: 4px; background-color: white;">
-        <a href="#" class="link-underline link-underline-opacity-0">
-            <div class="d-flex flex-lg-row mx-3 py-3 align-items-center justify-content-between" >
-             <span style="font-size: 17px; font-weight: 500; color: black;">Summer Essentials</span>
-             <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 15px; height: 15px; ">  
-                  <img src="./images/dropleft.svg" alt="" height="12" width="12" style="filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(1.5);
-             "></div>
-            </div>
- 
-            <div class="row row-cols-2 align-items-center justify-content-center ">
-             <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; padding-bottom: 5px !important;">
-                 <img src="./images/summer1.png" alt="" height="110" width="150" class="hero41">
-                 <span class="pt-2 " style="font-size: 12px; color: black; ">Vehicles <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Explore More</b></span>
-             </div>
-             <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; padding-bottom: 5px !important;">
-                 <img src="./images/summer2.jpeg" alt="" height="110" width="110" class="hero41">
-                 <span class="pt-2 " style="font-size: 12px; color: black; ">Shirts<br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Special Offer</b></span>
-             </div>
-             <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
-                 <img src="./images/summer3.jpeg" alt="" height="110" width="80" class="hero41">
-                 <span class="pt-2 " style="font-size: 12px; color: black; ">Kurtas <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 50% off</b></span>
-             </div>
-             <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
-                 <img src="./images/summer4.jpeg" alt="" height="110" width="120" class="hero41">
-                 <span class="pt-2 " style="font-size: 12px; color: black; ">T-Shirts <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 50% off</b></span>
-             </div>
-            </div>
-         </a>
-    </div>
-    <div class="col-4 hero4 shadow rounded-0" style="margin-left: 3px; margin-right: -6px; background-color: white;">
-        <a href="#" class="link-underline link-underline-opacity-0">
-            <div class="d-flex flex-lg-row mx-3 py-3 align-items-center justify-content-between" >
-             <span style="font-size: 17px; font-weight: 500; color: black;">Wedding & Gifting Special</span>
-             <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 15px; height: 15px; ">  
-                  <img src="./images/dropleft.svg" alt="" height="12" width="12" style="filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(1.5);
-             "></div>
-            </div>
- 
-            <div class="row row-cols-2 align-items-center justify-content-center ">
-             <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; padding-bottom: 5px !important;">
-                 <img src="./images/wedding1.jpeg" alt="" height="110" width="110" class="hero41">
-                 <span class="pt-2 " style="font-size: 12px; color: black; ">Smart Watches <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 40% off</b></span>
-             </div>
-             <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; padding-bottom: 5px !important;">
-                 <img src="./images/wedding4.jpeg" alt="" height="110" width="115" class="hero41">
-                 <span class="pt-2 " style="font-size: 12px; color: black; ">Speakers <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Special Offer</b></span>
-             </div>
-             <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
-                 <img src="./images/wedding2.jpeg" alt="" height="110" width="125" class="hero41">
-                 <span class="pt-2 " style="font-size: 12px; color: black; ">Key Holders <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 50% off</b></span>
-             </div>
-             <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
-                 <img src="./images/wedding3.jpeg" alt="" height="110" width="110" class="hero41">
-                 <span class="pt-2 " style="font-size: 12px; color: black; ">Neckbands <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Special Offer</b></span>
-             </div>
-            </div>
-         </a>
-    </div>
-</div>
-
-<div class="container-fluid hero31 d-flex shadow my-2">
-    <div class="col-4">
-        <a href="#">
-            <img src="./images/hero31.jpeg" alt="" width="320">
-        </a>
-    </div>
-    <div class="col-4">
-        <a href="#">
-            <img src="./images/hero32.jpeg" alt="" width="320">
-        </a>
-    </div>
-    <div class="col-4">
-        <a href="#">
-            <img src="./images/hero33.jpeg" alt="" width="325">
-        </a>
-    </div>
-</div>
-
-<!-- FOOTER -->
-
-<div class="container-fluid shadow-lg" style="margin-top: 30px; background-color: #e1f5ff;">
-    <div style="max-width: 1000px;  background-color: #e1f5ff;  padding: 30px">
-        <span style="font-size: 13px; color: rgb(58, 57, 57); font-weight: 600;  padding-top: 50px; padding-bottom: 50px; margin-left: -20px !important;"> Top Stories : Brand Directory </span>
-       <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-        <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">MOST SEARCHED FOR ON FLIPKART:</span>
-        <span style="font-size: 8; color: rgb(51, 45, 45);">Mobile I iPhone 16e I SAMSUNG Galaxy S25 Ultra I SAMSUNG Galaxy S25 Plus I SAMSUNG Galaxy S25 I iPhone 16 I 
-            iPhone 16 Plus I iPhone 16 Pro I iPhone 16 Pro Max I vivo V50 I OPPO Reno13 Pro I POCO <br>
-            X7 I realme 14 Pro Plus I REDMI Note 14 Pro+ 5G I Whoop Band I OPPO Find X8 I Flipkart Minutes 
-            I Flipkart Exchange I Flipkart Reset I Nothing Phone 2a Plus I Sarees I CMF by Nothing Phone 1 I Pocket Bazaar I Xiaomi 14 CIVI I Infinix Note 40 Pro 5G I <br>
-            15 I Infinix Note 40 5G I iPhone 15 Plus I vivo X Fold3 Pro I Motorola gO4s I Vivo x 100 I OnePlus Nord CE 3 Lite 5G I Spoyl Store I SAMSUNG Flip5I SAMSUNG FoldS I Flipkart Axis Bank Super Elite Credit card 15G Mobile Phones I Primebook Laptops I  <br>Moto Edge
-            40 I Grievance Redressal I OPPO Reno? Pro 5G I Help Centre I Track Orders I Manage Orders I Return Orders I Gift Cards Store I Flipkart Axis Bank Credit Card I Pay Later 
+        <!-- Search Bar with Dropdown Suggestions -->
+        <div class="position-relative w-75 h-25 p-0 mt-4 mb-4">
+        <div class="input-group search">
+        <!-- Search Icon Inside Input -->
+        <span class="input-group-text one border-0 p-1 mx-1 ">
+        <img src="./images/search.svg" alt="Search" height="15" width="15" >
         </span>
-    </div>
-
- <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-    <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">MOBILES  </span>   
-    <span style="font-size: 8; color: rgb(51, 45, 45);">
-        Motorola g64 5G I OPPO Reno 121 Motorola Edge 50 Fusion I REDMI 12 5G I REDMI Note 13 5G I Realme 12+ 5G I POCO C65 I Motorola G84 I Realme C53 I Infinix Smart 81 Samsung Galaxy S23 5G I Samsung Galaxy S21 FE 5G Qualcomm I <br>
-    vivo V30 I Samsung Galaxy S24 5G I Samsung Galaxy S24+ 5G I iPhone 12 64GB I iPhone 12 Pro 512GB I iPhone 12 128GB I Vivo Y15 I SAMSUNG Galaxy S21 FE 5G I Infinix HOT 30i I Realme 10 Pro 5G I MOTOROLA G62 5G I Nothing Phone I REDMI Note <br>
-    12 Pro 5G I Infinix SMART 7 I Vivo Y12 I Oppo Al2 I Motorola 5g Phone I Realme 5g Smartphone I Apple 5g Phone I lqoo 5g Phones I Oneplus 5g Phones I Vivo 5g Phones I Oppo 5g Smart Phones I Oppo F15 I Oppo A31 I Samsung A71 I Samsung A51 <br>
-    I Samsung A31 I 4G Mobile I Nokia Mobile I Samsung Mobile I iphone I Oppo Mobile I Vivo Mobile
-    </span>
- </div>
-      
- <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-    <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">CAMERA </span>   
-    <span style="font-size: 8; color: rgb(51, 45, 45);">
-         GoPro Action Camera I Nikon Camera I Canon Camera I Sony Camera I Canon DSLR I Nikon DSLR 
-     </span>   
-</div>
- <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-    <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">LAPTOPS  </span>   
-    <span style="font-size: 8; color: rgb(51, 45, 45);">
-         Asus ROG Ally I MacBook Pro M2 I Premium Laptop I ASUS ROG Strix SCAR 16 (2023) Core i9 13th Gen I ASUS ROG Zephyrus M16 (2023) Core i9 13th Gen I ASUS Zenbook 14 OLED (2022) I Realme Book Prime Core i5 11th Gen <br>
-         I Microsoft Surface Go Pentium 128GB I Apple Laptops I Acer Laptops I Lenovo Laptops I Dell Laptops I Asus Laptops I HP Laptops I Gaming Laptops 12 in 1 Laptops I Laptops I Dell latest laptops 20221 HP latest laptops 2022 I Infinix INBook Y1 Plus <br>
-         I SAMSUNG Galaxy Book3 112th Gen Intel Core Laptops
-     </span>   
-</div>
- <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-    <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);"> TVS  </span>   
-    <span style="font-size: 8; color: rgb(51, 45, 45);">
-        Nokia TV I Panasonic TV I Thomson TV I Mi X Pro I Realme TV I Motorola TV I OnePlus TVs I LG TV I TV I Sony TV I Samsung TV I Android Television I Iffalcon Tv I Mi TV 
-        
-     </span>   
-</div>
- <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-    <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">LARGE APPLIANCES:  </span>   
-    <span style="font-size: 8; color: rgb(51, 45, 45);">
-         Television I Washing Machines I Refrigerators I Air Conditioners I Electric Cookers I Electric Jug(Heater) / Travel Kettles I Induction Cooktops I Inverters / stabilizer I Irons / Iron Box I Mixer Grinder Juicer I Wet Grinders I Chimneys I Microwave Ovens I Vacuum Cleaners I 
-         Water Purifier I Fan 
-     </span>   
-</div>
- <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-    <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">CLOTHING   </span>   
-    <span style="font-size: 8; color: rgb(51, 45, 45);">
-        Sarees I Green bridal lehenga I Tops I Apron for Doctors I Shoes I Sunglasses I Bridal Blouse I Half saree blouse designs I Designer blouses I Blouse designs I Shirts I Cotton saree blouse designs I Tshirts I Jeans I Dresses I One pieces I <br>
-        Groom wedding sherwani I Designer Salwar Suits I Bra I Cotton simple blouse designs I Banarasi saree blouse designs I Stylish blouse astin design I Track Pant I Blouse neck designs I Kurtas I Party Dresses I Palazzo Suits I Anarkali I Gowns I Cut out dress <br>
-        I Salwar Suits I Kurtis I Designer Sarees I Leggings I Shorts I Georgette Sarees I Ethnic Wear I uppada pattu sarees I Blouse back design I Jodhpur pants 
-     </span>   
-</div>
- <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-    <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">FOOTWEAR:  </span>   
-    <span style="font-size: 8; color: rgb(51, 45, 45);">
-         Adidas Shoes I Reebok Shoes I Nike Shoes I Puma Shoes I Boots I Bata Shoes I Woodland Shoes I Skechers Shoes I Sneakers I Womens Boots I Sports Shoes I Loafers I Sandals I Lotto Sports Shoes I Casual Shoes I Womens Skechers Shoes I Asics Sports Shoes I Formal Shoes I School Shoes 
-     </span>   
-</div>
- <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-    <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">GROCERIES </span>   
-    <span style="font-size: 8; color: rgb(51, 45, 45);">
-         PhonePe Grocery Voucher I Hand Wash I Soap I Cashew Nuts I Sunflower Oil I Eggs I Toilet Cleaner I Harpic Toilet Cleaner I Dettol Soap I Mustard Oil I Biscuits I Cheese I Patanjali Atta I Fortune Oil I Aashirvaad Atta I Tea 
-     </span>   
-</div>
- <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-    <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">BEST SELLING ON FLIPKART  </span>   
-    <span style="font-size: 8; color: rgb(51, 45, 45);">
-         Headphones I Best Gas Geyser I Kitchen Geyser I Nutri Blenders I Portable Air Cooler I Best Air Cooler I Bags I Hitachi Refrigerator 3 Door I Books I Toys I Candles I Helmets I Wall Clocks I Baby Food I Chocolates I<br>
-          Cycles I Calculators I Lipsticks I Mask  I Vertiv UPS I Fastrack Watches I Wallets I Earrings I Gold Coins I Realme Pad Mini I Handbags I conekt SW2 Smartwatch I Mivi DuoPods a350 I Speaker Cleaner  
-     </span>   
-</div>
- <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-    <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">FURNITURE </span>   
-    <span style="font-size: 8; color: rgb(51, 45, 45);">
-         Furniture I Sofas I Beds I Dining sets I Wardrobes I Mattresses I TV Units I Tables I Chairs I Shelves I Bean Ba s Office Chairs I Computer Table I Office Tables I Red Sofa I Wakefit Beds I White Sofa I Wakefit Mattress I Green Sofa I Black Sofa I Brown Sofa 
-     </span>   
-</div>
- <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
-    <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">BGMH:  </span>   
-    <span style="font-size: 8; color: rgb(51, 45, 45);">
-         Shampoo I Whey Protein I Homeopathy I Cricket I Cycles I Footballs I Treadmills I Christmas Gifts I Fitness A Drinks I Toys I Milk Drink Mixes I Chyawanprash I Indian Flag I Protein Supplements 
-         I Books Store I Musical Instrument Store I Dabur Chyawanprash I Baidyanath Chyawanprash I Energy 
-
-     </span>   
-</div>
-
-
-    </div>
-
-</div>
-
-<!-- footer2 -->
-
-<div class="container-fluid " style="height: 250px; width: 1000; background: rgb(36, 36, 39);">
-    <div class="d-flex flex-lg-row">
-<div class="col-7 d-flex mx-3 flex-lg-row ">
-    <div style="margin: 30px 10px 20px 20px;" class="d-flex flex-column">
-        <span style="font-size: 10px; color: rgb(160, 155, 155); margin-bottom: 8px;">ABOUT</span>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Contact Us</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">About Us</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Careers</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Flipkart Stories</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Press</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Corporate Information</a>
-    </div>
-    
-    <div style="margin: 30px 10px 20px 20px;" class="d-flex flex-column px-4">
-        <span style="font-size: 10px; color: rgb(160, 155, 155); margin-bottom: 8px;">GROUP COMPANIES</span>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Myntra</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Cleartrip</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Shopsy</a>
-        </div>
-    <div style="margin: 30px 10px 20px 20px;" class="d-flex flex-column px-2">
-        <span style="font-size: 10px; color: rgb(160, 155, 155); margin-bottom: 8px;">HELP</span>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Payment</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Shipping</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Cancellation & Refund</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">FAQ</a>
-        </div>
-    <div style="margin: 30px 10px 20px 20px;" class="d-flex flex-column mx-2 px-3">
-        <span style="font-size: 10px; color: rgb(160, 155, 155); margin-bottom: 8px;">CONSUMER POLICY</span>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Cancellation & Refund</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Terms of Use</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Security</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Sitemap</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">Grivance Redressal</a>
-        <a href="#" class="footer link-underline link-underline-opacity-0">EPR Compliance</a>
-        </div>
-
-
-</div>
-<div style="height: 150px; width: 0.5px; background-color: gray; margin-top: 30px; margin-left: -10px;"></div>
-
-<div class="col-4 d-flex">
-    <div style="margin: 30px 0px 0px 0px; width: 380px;" class="d-flex flex-column px-4">
-        <span style="font-size: 8px; color: rgb(160, 155, 155); margin-bottom: 8px;">Mail Us</span>
-        <span class="footer0">
-            Flipkart Internet Private Limited, <br>
-            Buildings Alyssa, Begonia & <br>
-            Clove Embassy Tech Village, <br>
-            Outer Ring Road, Devarabeesanahalli Village, <br>
-            Bengaluru, 560103,<br> Karnataka, India
-        </span>
-        <span style="font-size: 8px; color: rgb(160, 155, 155); margin-bottom: 5px; margin-top: 10px;">Social :</span>
-
-        <div>
-            <img src="./images/facebook.svg" alt="" height="16" width="16">
-            <img src="./images/twitter.svg" alt="" height="16" width="16" class="mx-2">
-            <img src="./images/youtube.svg" alt="" height="16" width="16">
-            <img src="./images/insta.svg" alt="" height="15" width="15"  class="mx-2" style="filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg);
-">
+        <input class="form-control border-0 shadow-none font p-0 mb-1 one" type="search" id="searchInput" placeholder="Search for Products, Brands and More" onfocus="showDropdown()" onkeyup="filterSuggestions()">
         </div>
         
-    </div>
-        <div style="margin: 30px -30px 20px 10px; width: 380;" class="d-flex flex-column px-4">
-            <span style="font-size: 8px; color: rgb(160, 155, 155); margin-bottom: 8px;">Registered Office Address</span>
-            <span class="footer0">
-                Flipkart Internet Private Limited, <br>
-                Buildings Alyssa, Begonia & <br>
-                Clove Embassy Tech Village, <br>
-                Outer Ring Road, Devarabeesanahalli Village, <br>
-                Bengaluru, 560103,<br> Karnataka, India <br>
-                CIN : U51109KA2012PTC066107 <br>
-                Telephone : <span style="color: blue; ">044-45614700 / 044-67415800</span>
-
-            </span>    
+        <!-- Dropdown for Search Suggestions -->
+        <div class="search-dropdown position-absolute w-100  bg-white shadow d-none" id="searchDropdown">
+        <p class=" fw-bolder  px-3 pt-2 mb-1 text-muted" style="font-size: 10px; ">Discover More</p>
+        <ul class="list-group list-unstyled" id="suggestionList">
+        <li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > shoes</li>
+        <li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > mobiles</li>
+        <li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > t shirts</li>
+        <li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > laptops</li>
+        <li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > watches</li>
+        <li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > tv</li>
+        <li class="list-group-item px-2 py-1 border-0 search2"><img src="./images/search.svg" class="mx-2" height="15" width="15" > sarees</li>
+        </ul>
+        </div>
+        </div>
         
-        </div>    
+        
+        <!-- Navbar Items -->
+        <ul class="navbar-nav mt-3 " style="position: relative;">
+        <!-- Login Dropdown -->
+        <div class="dropdown login-dropdown col-lg-10" style="position: absolute; left: -40%; top:-70%;; transform: translateX(-50%);">
+            <button class="btn login-btn dropdown-toggle login btn-sm " type="button" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" >
+                <img src="./images/login.svg" alt="Profile" class="profile-icon"> <!-- Left Profile Image -->
+                Login
+                <img src="./images/dropdown.svg" alt="Dropdown" class="dropdown-icon"> <!-- Right Dropdown Image -->
+            </button>
+            
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu border-0 shadow rounded " aria-labelledby="loginDropdown">
+                <div class="d-flex my-2" >
+                    <li><a class="dropdown-item" href="#">New Customer?</a></li>
+                <li><a class="dropdown-item text-primary fw-bold" href="#">Sign Up</a></li>
+                </div>
+                <li><hr class="dropdown-divider"></li> <!-- Divider -->
+                <li class="d-flex mx-2 my-3 z-0" style="margin-top: 5px !important;"  >
+                    <img src="./images/login.svg" alt="" height="15" width="15" class="mx-1 ">
+                    <a class="dropdown-item profile z-n1 " href="#">My Profile</a>
+                </li>
+                <li class="d-flex mx-2 my-3 z-0 "  >
+                    <img src="./images/fpluszone.svg" alt="" height="15" width="15" class="mx-1 ">
+                    <a class="dropdown-item profile z-n1 " href="#">Flipkart Plus Zone</a>
+                </li>
+                <li class="d-flex mx-2 my-3 z-0 "  >
+                    <img src="./images/orders.svg" alt="" height="15" width="15" class="mx-1 ">
+                    <a class="dropdown-item profile z-n1 " href="#">Orders</a>
+                </li>
+                <li class="d-flex mx-2 my-3 z-0 "  >
+                    <img src="./images/whishlist.svg" alt="" height="15" width="15" class="mx-1 ">
+                    <a class="dropdown-item profile z-n1 " href="#">Whishlist</a>
+                </li>
+                <li class="d-flex mx-2 my-3 z-0 "  >
+                    <img src="./images/rewards.svg" alt="" height="15" width="15" class="mx-1 ">
+                    <a class="dropdown-item profile z-n1 " href="#">Rewards</a>
+                </li>
+                <li class="d-flex mx-2 my-3 z-0 " style="margin-bottom: 0px !important;" >
+                    <img src="./images/giftcard.svg" alt="" height="15" width="15" class="mx-1 ">
+                    <a class="dropdown-item profile z-n1 " href="#">Gift Cards</a>
+                </li>
+        
+            </ul>
+        </div>
+        
+        <!-- Cart -->
+        <li class="nav-item mr-5 cart1 "   style="position: absolute; left: -18%;top:-10; transform: translateX(-50%);">
+            <a class="nav-link text-dark cart d-flex" href="#">
+                <img src="./images/cart.svg" alt="" height="15" width="15">
+                <i class="bi bi-cart "></i> Cart
+            </a>
+        </li>
+        
+        <!-- Become a Seller -->
+        <li class="nav-item seller" style="margin-top: -10; " >
+            <a class="nav-link text-dark cart d-flex seller2 " href="#">
+                <img src="./images/seller.svg" alt="" height="15" width="15">
+                <i class="bi bi-cart"></i> Become a Seller
+            </a>
+        </li>
+        
+        <!-- 3 Dots Dropdown -->
+        <li class="nav-item dropdown dot " >
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown">
+                <img src="./images/3dot.svg" alt="" height="15" width="15">
+            </a>
+            <ul class="dropdown-menu dot2 shadow border-0 ">
+                <li><a class="dropdown-item" href="#">Notifications</a></li>
+                <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+            </ul>
+        </li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </nav>
+        
+        
+        <!-- another navbar  -->
+        
+        <div class=" container-fluid">
+        <nav class="main-navbar container outer shadow text-center col-12 d-flex justify-content-center ">
+        <ul class="nav-links ">
+        <li ><a href="#" class="kilos d-flex flex-column justify-content-center nohover">
+        <img src="./images/kilos.png" alt="" height="45" width="45">
+        kilos</a></li>
+        <li><a href="#" class="kilos d-flex flex-column justify-content-center nohover">
+        <img src="./images/mobiles.png" alt="" height="45" width="45">
+        Mobiles</a></li>
+        
+        <!-- Fashion Dropdown -->
+        <li class="dropdown">
+        <a href="#" class="kilos d-flex flex-column justify-content-center nohover fashion">
+        <img src="./images/fashion.png" alt="" height="45" width="45">
+        <div class="d-flex align-items-center fashion" style="position: relative;">
+            <span >Fashion</span>
+            <div class="wrapper">
+                <img src="./images/dropdown.svg" alt="" height="10" width="10" class="my-1 mx-1 fash1">
+                <img src="./images/dropdown.svg" alt="" height="10" width="10" class="my-1 mx-1 fash2">
+            
+            </div>
+            </div> </a>
+        <ul class="dropdown-menu border-0  bg-light drop" style="margin-top: 15 !important;">
+        <li class="has-submenu position-relative">
+        <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 my-1">
+            <span>Men's Top Wear</span> 
+            <img src="./images/dropleft.svg" alt="" width="10" height="10">
+        </a>
+        <ul class="submenu  bg-light" >
+            <li ><a href="#" class="liSize fw-bold">More in Men's Top wear</a></li>
+            <li><a href="#" class="liSize">All</a></li>
+            <li><a href="#" class="liSize">T-shirt</a></li>
+            <li><a href="#" class="liSize">Formal shirts</a></li>
+            <li><a href="#" class="liSize">Kurtas</a></li>
+            <li><a href="#" class="liSize">Ethnic Sets</a></li>
+        </ul>
+        </li>
+        <li class="has-submenu position-relative">
+        <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
+            <span>Men's bottom Wear</span>
+            <img src="./images/dropleft.svg" alt="" width="10" height="10">
+         </a>
+        <ul class="submenu  bg-light" >
+            <li ><a href="#" class="liSize fw-bold">More in Men's Bottom wear</a></li>
+            <li><a href="#" class="liSize">All</a></li>
+            <li><a href="#" class="liSize">Jeans</a></li>
+            <li><a href="#" class="liSize">Trousers</a></li>
+            <li><a href="#" class="liSize">Trackpants</a></li>
+            <li><a href="#" class="liSize">Shorts</a></li>
+            <li><a href="#" class="liSize">Cargos</a></li>
+        </ul>
+        </li>
+        <li class="has-submenu position-relative">
+        <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
+           <span> Women Ethnic </span>
+            <img src="./images/dropleft.svg" alt="" width="10" height="10">
+        </a>
+        <ul class="submenu  bg-light" >
+            <li ><a href="#" class="liSize fw-bold">More in Women etnic</a></li>
+            <li><a href="#" class="liSize">All</a></li>
+            <li><a href="#" class="liSize">Sarees</a></li>
+            <li><a href="#" class="liSize">Kurtas & kurtis</a></li>
+            <li><a href="#" class="liSize">Gowns</a></li>
+            <li><a href="#" class="liSize">Dupatta</a></li>
+        </ul>
+        </li>
+        <li class="has-submenu position-relative">
+        <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
+           <span> Kids</span>
+            <img src="./images/dropleft.svg" alt="" width="10" height="10">
+         </a>
+        <ul class="submenu  bg-light" >
+            <li ><a href="#" class="liSize fw-bold">More in kids</a></li>
+            <li><a href="#" class="liSize">All</a></li>
+            <li><a href="#" class="liSize">Dresses</a></li>
+            <li><a href="#" class="liSize">Infant Wear</a></li>
+            <li><a href="#" class="liSize">Kids Sports Shoes</a></li>
+            <li><a href="#" class="liSize">Shorts</a></li>
+        </ul>
+        </li>
+        <li class="has-submenu position-relative">
+        <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
+             <span>Winter </span>
+             <img src="./images/dropleft.svg" alt="" width="10" height="10">
+            </a>
+        <ul class="submenu  bg-light" >
+            <li ><a href="#" class="liSize fw-bold">More in Winter</a></li>
+            <li><a href="#" class="liSize">All</a></li>
+            <li><a href="#" class="liSize">Jacket</a></li>
+            <li><a href="#" class="liSize">Sweatshirts</a></li>
+            <li><a href="#" class="liSize">Shrugs</a></li>
+            <li><a href="#" class="liSize">Thermals</a></li>
+        </ul>
+        </li>
+        <li class="has-submenu position-relative">
+        <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
+           <span> Women Western</span>
+            <img src="./images/dropleft.svg" alt="" width="10" height="10">
+         </a>
+        <ul class="submenu  bg-light" >
+            <li ><a href="#" class="liSize fw-bold">More in Women Western</a></li>
+            <li><a href="#" class="liSize">All</a></li>
+            <li><a href="#" class="liSize">Boxers</a></li>
+            <li><a href="#" class="liSize">Vests</a></li>
+            <li><a href="#" class="liSize">Innerwear</a></li>
+            <li><a href="#" class="liSize">slippers Flip</a></li>
+        </ul>
+        </li>
+        
+        </ul>
+        </li>
+        
+        <!-- Electronics Dropdown -->
+        <li class="dropdown">
+            <a href="#" class="kilos d-flex flex-column justify-content-center nohover fashion">
+            <img src="./images/Electronics.png" alt="" height="45" width="45">
+            <div class="d-flex align-items-center fashion" style="position: relative;">
+                <span >Electronics</span>
+                <div class="wrapper">
+                    <img src="./images/dropdown.svg" alt="" height="10" width="10" class="my-1 mx-1 fash1">
+                    <img src="./images/dropdown.svg" alt="" height="10" width="10" class="my-1 mx-1 fash2">
+                
+                </div>
+                </div> </a>
+            <ul class="dropdown-menu border-0  bg-light drop" style="margin-top: 15 !important;">
+            <li class="has-submenu position-relative">
+            <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 my-1">
+                <span>Audio</span> 
+                <img src="./images/dropleft.svg" alt="" width="10" height="10">
+            </a>
+            <ul class="submenu  bg-light" >
+                <li ><a href="#" class="liSize fw-bold">More in Audio</a></li>
+                <li><a href="#" class="liSize">All</a></li>
+                <li><a href="#" class="liSize">Bluetooth Headphones</a></li>
+                <li><a href="#" class="liSize">Soundbar</a></li>
+                <li><a href="#" class="liSize">Wired Headphones</a></li>
+                <li><a href="#" class="liSize">Home Theartre</a></li>
+                <li><a href="#" class="liSize">True WireLess Headphones</a></li>
+            </ul>
+            </li>
+            <li class="has-submenu position-relative">
+            <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
+                <span>Games</span>
+                <img src="./images/dropleft.svg" alt="" width="10" height="10">
+             </a>
+            <ul class="submenu  bg-light" >
+                <li ><a href="#" class="liSize fw-bold">More in Games</a></li>
+                <li><a href="#" class="liSize">All</a></li>
+                <li><a href="#" class="liSize">Mouse</a></li>
+                <li><a href="#" class="liSize">Keyboards</a></li>
+                <li><a href="#" class="liSize">Gamepads</a></li>
+                <li><a href="#" class="liSize">Games</a></li>
+                <li><a href="#" class="liSize">Controllers</a></li>
+            </ul>
+            </li>
+            <li class="has-submenu position-relative">
+            <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
+               <span> Powerbank </span>
+                <img src="./images/dropleft.svg" alt="" width="10" height="10">
+            </a>
+            <ul class="submenu  bg-light" >
+                <li ><a href="#" class="liSize fw-bold">More in Powerbank</a></li>
+                <li><a href="#" class="liSize">All</a></li>
+                <li><a href="#" class="liSize">Powerbank</a></li>
+                
+            </ul>
+            </li>
+            <li class="has-submenu position-relative">
+            <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
+               <span>Smart Wearables</span>
+                <img src="./images/dropleft.svg" alt="" width="10" height="10">
+             </a>
+            <ul class="submenu  bg-light" >
+                <li ><a href="#" class="liSize fw-bold">More in Smart Wearables</a></li>
+                <li><a href="#" class="liSize">All</a></li>
+                <li><a href="#" class="liSize">Smart Watches </a></li>
+                <li><a href="#" class="liSize">Smart bands</a></li>
+                <li><a href="#" class="liSize">Smart Glasses</a></li>
+                <li><a href="#" class="liSize">Smart Rings</a></li>
+                <li><a href="#" class="liSize">Smart Rings</a></li>
+                <li><a href="#" class="liSize">Smart Trackers</a></li>
+            </ul>
+            </li>
+            <li class="has-submenu position-relative">
+            <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
+                 <span>Storage </span>
+                 <img src="./images/dropleft.svg" alt="" width="10" height="10">
+                </a>
+            <ul class="submenu  bg-light" >
+                <li ><a href="#" class="liSize fw-bold">More in Storage</a></li>
+                <li><a href="#" class="liSize">All</a></li>
+                <li><a href="#" class="liSize">Memory cards</a></li>
+                <li><a href="#" class="liSize">Pendrive</a></li>
+                <li><a href="#" class="liSize">Hard Drive</a></li>
+                <li><a href="#" class="liSize">Hard Disk</a></li>
+            </ul>
+            </li>
+            <li class="has-submenu position-relative">
+            <a href="#" class="liSize1 d-flex align-items-center justify-content-between px-2 py-2 mb-1">
+               <span> Tablets</span>
+                <img src="./images/dropleft.svg" alt="" width="10" height="10">
+             </a>
+            <ul class="submenu  bg-light" >
+                <li ><a href="#" class="liSize fw-bold">More in Tablets</a></li>
+                <li><a href="#" class="liSize">All</a></li>
+                <li><a href="#" class="liSize">Tablets</a></li>
+                
+            </ul>
+            </li>
+            
+            </ul>
+            </li>
+        <!-- Home and furnitur  -->
+        <li class="dropdown">
+        <a href="#" class="kilos d-flex flex-column justify-content-center nohover">
+        <img src="./images/home&furniture.jpeg" alt="" height="45" width="45">
+        Home &Furniture</a>
+        <ul class="dropdown-menu">
+        <li class="has-submenu">
+        <a href="#">Mobiles ▸</a>
+        <ul class="submenu">
+            <li><a href="#">Samsung</a></li>
+            <li><a href="#">Apple</a></li>
+            <li><a href="#">OnePlus</a></li>
+        </ul>
+        </li>
+        <li><a href="#">Laptops</a></li>
+        <li><a href="#">Tablets</a></li>
+        </ul>
+        </li>
+        
+        <li><a href="#" class="kilos d-flex flex-column justify-content-center nohover">
+        <img src="./images/appliances.jpeg" alt="" height="45" width="45">
+        Appliances</a></li>
+        <li><a href="#" class="kilos d-flex flex-column justify-content-center nohover">
+        <img src="./images/flight.png" alt="" height="45" width="45">
+        Flight Bookings</a></li>
+        
+        
+        <!-- Toys & More Dropdown -->
+        <li class="dropdown">
+        <a href="#" class="kilos d-flex flex-column justify-content-center nohover">
+        <img src="./images/beauty,toys&more.png" alt="" height="45" width="45">
+        Beauty,Toys&More </a>
+        <ul class="dropdown-menu">
+        <li class="has-submenu">
+        <a href="#" class="kilos">Beauty ▸</a>
+        <ul class="submenu">
+            <li><a href="#">Makeup</a></li>
+            <li><a href="#">Skincare</a></li>
+        </ul>
+        </li>
+        <li><a href="#" >Toys</a></li>
+        <li><a href="#">Stationery</a></li>
+        </ul>
+        </li>
+        <!-- two wheelers  -->
+        <li class="dropdown">
+        <a href="#" class="kilos d-flex flex-column justify-content-center nohover">
+        <img src="./images/twoWheelers.png" alt="" height="45" width="45">
+        Two Wheelers </a>
+        <ul class="dropdown-menu">
+        <li class="has-submenu">
+        <a href="#" class="kilos">Beauty ▸</a>
+        <ul class="submenu">
+            <li><a href="#">Makeup</a></li>
+            <li><a href="#">Skincare</a></li>
+        </ul>
+        </li>
+        <li><a href="#" >Toys</a></li>
+        <li><a href="#">Stationery</a></li>
+        </ul>
+        </li>
+        
+        
+        </ul>
+        </div>
+        </nav>
+        
+        <!--Slider-->
+        
+        <div id="carouselExampleIndicators" class="carousel slide shadow px-1 pb-3 bg-white " data-bs-ride="carousel" data-bs-interval="4000">
+          
+            <!-- Indicators (dots) -->
+            <div class="carousel-indicators ">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 3"></button>
+            </div>
+          
+            <!-- Carousel Images -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./images/slider7.jpeg" class="d-block w-100  rounded" alt="Technology">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/slider8.jpeg" class="d-block w-100  rounded" alt="Fashion">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/slider2.jpeg" class="d-block w-100  rounded" alt="Nature">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/slider3.jpeg" class="d-block w-100  rounded" alt="Nature">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/slider4.jpeg" class="d-block w-100  rounded" alt="Nature">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/slider5.jpeg" class="d-block w-100  rounded" alt="Nature">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/slider6.jpeg" class="d-block w-100  rounded" alt="Nature">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/slider1.jpeg" class="d-block w-100  rounded" alt="Nature">
+              </div>
+              
+            </div>
+        
+          
+            <!-- Navigation Buttons -->
+            <button class="carousel-control-prev custom-btn " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon small-arrow" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next custom-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon small-arrow" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+         
+        <!-- Hero-1   -->
+        <div class="d-flex flex-lg-row mx-1">
+        <div class="custom-slider-container col-md-10 shadow">
+            <span style="font-weight: 600; display: block; margin-top: 10px;" class="mx-3 " >499 only</span>
+            <button id="prev-button" class="button custom-prev" disabled>
+                <img src="./images/dropleft.svg" alt="" height="12" width="12" style="rotate: 180deg;">
+            </button>
+            <div class="custom-slider">
+                <div class="custom-slide d-flex flex-column align-items-center ">
+                    <img src="./images/ladka.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">T-shirt,Shirt,Jean... <br> <b>Under ₹499</b></span>
+                </div>
+                <div class="custom-slide d-flex flex-column align-items-center ">
+                    <img src="./images/jute1.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Top Offers <br> <b>Under ₹499</b></span>
+                </div>
+                <div class="custom-slide d-flex flex-column align-items-center ">
+                    <img src="./images/sareewali.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Best Sellig Sarees <br> <b>Under ₹499</b></span>
+                </div>
+                <div class="custom-slide d-flex flex-column align-items-center ">
+                    <img src="./images/jute2.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Reebok,HRX.. <br> <b>Min. 70% off</b></span>
+                </div>
+                <div class="custom-slide d-flex flex-column align-items-center ">
+                    <img src="./images/ladki.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Tokyo Talkies, Sassa <br> <b>Under ₹499</b></span>
+                </div>
+                <div class="custom-slide d-flex flex-column align-items-center ">
+                    <img src="./images/pursewali.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Trendy Handbags <br> <b>Under ₹499</b></span>
+                </div>
+                <div class="custom-slide d-flex flex-column align-items-center ">
+                    <img src="./images/belt.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Accesories Combo <br> <b>Under ₹499</b></span>
+                </div>
+                <div class="custom-slide d-flex flex-column align-items-center ">
+                    <img src="./images/ghadi.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Provogue,Killer&M... <br> <b>Under ₹499</b></span>
+                </div>
+                
+            </div>
+            
+            <button id="next-button" class="button custom-next">
+                <img src="./images/dropleft.svg" alt="" height="12" width="12"></button>
+        </div>
+        <!--airIndia img-->
+         
+        <img src="./images/airIndia.jpeg" alt=""  class="airIndia" >
+        
+        </div>
+        
+        <!-- hero-2 -->
+        
+        <div class="new-slider-container  shadow">
+            <span style="font-weight: 600; display: block; margin-top: 10px;" class="mx-3">
+                Best Deals on Smartphones</span>
+            <button id="new-prev-button" class="button new-prev" disabled>
+                <img src="./images/dropleft.svg" alt="" height="12" width="12" style="rotate: 180deg;">
+            </button>
+            <div class="new-slider">
+                <div class="new-slide d-flex flex-column align-items-center">
+                    <img src="./images/mobile1.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Motorola Edge 50 pr... <br> <b>Just ₹20,999*</b></span>
+                </div>
+                <div class="new-slide d-flex flex-column align-items-center">
+                    <img src="./images/mobile2.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Vivo T3 5G <br> <b>From ₹16,999*</b></span>
+                </div>
+                <div class="new-slide d-flex flex-column align-items-center">
+                    <img src="./images/mobile3.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">CMF Phone1(8GB) <br> <b>Just ₹12,999*</b></span>
+                </div>
+                <div class="new-slide d-flex flex-column align-items-center">
+                    <img src="./images/mobile4.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">moto g35 5G <br> <b>From ₹9,999*</b></span>
+                </div>
+                <div class="new-slide d-flex flex-column align-items-center">
+                    <img src="./images/mobile5.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2"> moto g64 5G<br> <b>Just ₹12,999*</b></span>
+                </div>
+                <div class="new-slide d-flex flex-column align-items-center">
+                    <img src="./images/mobile6.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Nothing Phone 2a <br> <b>From ₹21,999*</b></span>
+                </div>
+                <div class="new-slide d-flex flex-column align-items-center">
+                    <img src="./images/mobile7.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Realme P1 5g <br> <b>From ₹13,999*</b></span>
+                </div>
+                <div class="new-slide d-flex flex-column align-items-center">
+                    <img src="./images/mobile8.jpeg" alt="" height="105" width="80">
+                    <span class="tshirt my-2">Poco M7 pro 5G <br> <b>From ₹13,999*</b></span>
+                </div>
+            </div>
+            <button id="new-next-button" class="button new-next">
+                <img src="./images/dropleft.svg" alt="" height="12" width="12">
+            </button>
+        </div>
+        
+        <!-- hero-3 -->
+        
+        <div class="container-fluid hero31 d-flex shadow my-2">
+            <div class="col-4">
+                <a href="#">
+                    <img src="./images/hero31.jpeg" alt="" width="320">
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#">
+                    <img src="./images/hero32.jpeg" alt="" width="320">
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#">
+                    <img src="./images/hero33.jpeg" alt="" width="325">
+                </a>
+            </div>
+        </div>
+        
+        <!-- hero-4 -->
+        <div class="container-fluid d-flex bg-light">
+            <div class="col-4 hero4 shadow rounded-0" style="margin-right: 3px; margin-left: -6px; background-color: white;">
+                <a href="#" class="link-underline link-underline-opacity-0">
+                   <div class="d-flex flex-lg-row mx-3 py-3 align-items-center justify-content-between" >
+                    <span style="font-size: 17px; font-weight: 500; color: black;">Season's Top Pics</span>
+                    <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 15px; height: 15px; ">  
+                         <img src="./images/dropleft.svg" alt="" height="12" width="12" style="filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(1.5);
+                    "></div>
+                   </div>
+        
+                   <div class="row row-cols-2 align-items-center justify-content-center ">
+                    <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; padding-bottom: 5px !important;">
+                        <img src="./images/season1.jpeg" alt="" height="110" width="80" class="hero41">
+                        <span class="pt-2 " style="font-size: 12px; color: black; ">Dry Fruit, Nut & Seed <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 50% off</b></span>
+                    </div>
+                    <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; padding-bottom: 5px !important;">
+                        <img src="./images/season2.jpeg" alt="" height="110" width="80" class="hero41">
+                        <span class="pt-2 " style="font-size: 12px; color: black; ">Clocks <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 50% off</b></span>
+                    </div>
+                    <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
+                        <img src="./images/season3.jpeg" alt="" height="110" width="80" class="hero41">
+                        <span class="pt-2 " style="font-size: 12px; color: black; ">Women's Sarees <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Grab Or Gone</b></span>
+                    </div>
+                    <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
+                        <img src="./images/season4.jpeg" alt="" height="110" width="80" class="hero41">
+                        <span class="pt-2 " style="font-size: 12px; color: black; ">Women's Gowns <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Grab Or Gone</b></span>
+                    </div>
+                   </div>
+                </a>
+            </div>
+            <div class="col-4 hero4 shadow  rounded-0" style="margin-left: 4px; margin-right: 4px; background-color: white;">
+                <a href="#" class="link-underline link-underline-opacity-0">
+                    <div class="d-flex flex-lg-row mx-3 py-3 align-items-center justify-content-between" >
+                     <span style="font-size: 17px; font-weight: 500; color: black;">Summer Essentials</span>
+                     <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 15px; height: 15px; ">  
+                          <img src="./images/dropleft.svg" alt="" height="12" width="12" style="filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(1.5);
+                     "></div>
+                    </div>
+         
+                    <div class="row row-cols-2 align-items-center justify-content-center ">
+                     <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; padding-bottom: 5px !important;">
+                         <img src="./images/summer1.png" alt="" height="110" width="150" class="hero41">
+                         <span class="pt-2 " style="font-size: 12px; color: black; ">Vehicles <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Explore More</b></span>
+                     </div>
+                     <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; padding-bottom: 5px !important;">
+                         <img src="./images/summer2.jpeg" alt="" height="110" width="110" class="hero41">
+                         <span class="pt-2 " style="font-size: 12px; color: black; ">Shirts<br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Special Offer</b></span>
+                     </div>
+                     <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
+                         <img src="./images/summer3.jpeg" alt="" height="110" width="80" class="hero41">
+                         <span class="pt-2 " style="font-size: 12px; color: black; ">Kurtas <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 50% off</b></span>
+                     </div>
+                     <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
+                         <img src="./images/summer4.jpeg" alt="" height="110" width="120" class="hero41">
+                         <span class="pt-2 " style="font-size: 12px; color: black; ">T-Shirts <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 50% off</b></span>
+                     </div>
+                    </div>
+                 </a>
+            </div>
+            <div class="col-4 hero4 shadow rounded-0" style="margin-left: 3px; margin-right: -6px; background-color: white;">
+                <a href="#" class="link-underline link-underline-opacity-0">
+                    <div class="d-flex flex-lg-row mx-3 py-3 align-items-center justify-content-between" >
+                     <span style="font-size: 17px; font-weight: 500; color: black;">Wedding & Gifting Special</span>
+                     <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 15px; height: 15px; ">  
+                          <img src="./images/dropleft.svg" alt="" height="12" width="12" style="filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(1.5);
+                     "></div>
+                    </div>
+         
+                    <div class="row row-cols-2 align-items-center justify-content-center ">
+                     <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; padding-bottom: 5px !important;">
+                         <img src="./images/wedding1.jpeg" alt="" height="110" width="110" class="hero41">
+                         <span class="pt-2 " style="font-size: 12px; color: black; ">Smart Watches <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 40% off</b></span>
+                     </div>
+                     <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; padding-bottom: 5px !important;">
+                         <img src="./images/wedding4.jpeg" alt="" height="110" width="115" class="hero41">
+                         <span class="pt-2 " style="font-size: 12px; color: black; ">Speakers <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Special Offer</b></span>
+                     </div>
+                     <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-right: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
+                         <img src="./images/wedding2.jpeg" alt="" height="110" width="125" class="hero41">
+                         <span class="pt-2 " style="font-size: 12px; color: black; ">Key Holders <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Min. 50% off</b></span>
+                     </div>
+                     <div class="d-flex flex-column border border-1  align-items-center justify-content-center py-3 rounded-1" style="max-width: 150; margin-left: 2.5px; margin-top: 6px; padding-bottom: 5px !important;">
+                         <img src="./images/wedding3.jpeg" alt="" height="110" width="110" class="hero41">
+                         <span class="pt-2 " style="font-size: 12px; color: black; ">Neckbands <br><b style=" color: rgb(7, 151, 7); font-weight: 600;">Special Offer</b></span>
+                     </div>
+                    </div>
+                 </a>
+            </div>
+        </div>
+        
+        <div class="container-fluid hero31 d-flex shadow my-2">
+            <div class="col-4">
+                <a href="#">
+                    <img src="./images/hero31.jpeg" alt="" width="320">
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#">
+                    <img src="./images/hero32.jpeg" alt="" width="320">
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#">
+                    <img src="./images/hero33.jpeg" alt="" width="325">
+                </a>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        
+        <div class="container-fluid shadow-lg" style="margin-top: 30px; background-color: #e1f5ff;">
+            <div style="max-width: 1000px;  background-color: #e1f5ff;  padding: 30px">
+                <span style="font-size: 13px; color: rgb(58, 57, 57); font-weight: 600;  padding-top: 50px; padding-bottom: 50px; margin-left: -20px !important;"> Top Stories : Brand Directory </span>
+               <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+                <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">MOST SEARCHED FOR ON FLIPKART:</span>
+                <span style="font-size: 8; color: rgb(51, 45, 45);">Mobile I iPhone 16e I SAMSUNG Galaxy S25 Ultra I SAMSUNG Galaxy S25 Plus I SAMSUNG Galaxy S25 I iPhone 16 I 
+                    iPhone 16 Plus I iPhone 16 Pro I iPhone 16 Pro Max I vivo V50 I OPPO Reno13 Pro I POCO <br>
+                    X7 I realme 14 Pro Plus I REDMI Note 14 Pro+ 5G I Whoop Band I OPPO Find X8 I Flipkart Minutes 
+                    I Flipkart Exchange I Flipkart Reset I Nothing Phone 2a Plus I Sarees I CMF by Nothing Phone 1 I Pocket Bazaar I Xiaomi 14 CIVI I Infinix Note 40 Pro 5G I <br>
+                    15 I Infinix Note 40 5G I iPhone 15 Plus I vivo X Fold3 Pro I Motorola gO4s I Vivo x 100 I OnePlus Nord CE 3 Lite 5G I Spoyl Store I SAMSUNG Flip5I SAMSUNG FoldS I Flipkart Axis Bank Super Elite Credit card 15G Mobile Phones I Primebook Laptops I  <br>Moto Edge
+                    40 I Grievance Redressal I OPPO Reno? Pro 5G I Help Centre I Track Orders I Manage Orders I Return Orders I Gift Cards Store I Flipkart Axis Bank Credit Card I Pay Later 
+                </span>
+            </div>
+        
+         <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+            <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">MOBILES  </span>   
+            <span style="font-size: 8; color: rgb(51, 45, 45);">
+                Motorola g64 5G I OPPO Reno 121 Motorola Edge 50 Fusion I REDMI 12 5G I REDMI Note 13 5G I Realme 12+ 5G I POCO C65 I Motorola G84 I Realme C53 I Infinix Smart 81 Samsung Galaxy S23 5G I Samsung Galaxy S21 FE 5G Qualcomm I <br>
+            vivo V30 I Samsung Galaxy S24 5G I Samsung Galaxy S24+ 5G I iPhone 12 64GB I iPhone 12 Pro 512GB I iPhone 12 128GB I Vivo Y15 I SAMSUNG Galaxy S21 FE 5G I Infinix HOT 30i I Realme 10 Pro 5G I MOTOROLA G62 5G I Nothing Phone I REDMI Note <br>
+            12 Pro 5G I Infinix SMART 7 I Vivo Y12 I Oppo Al2 I Motorola 5g Phone I Realme 5g Smartphone I Apple 5g Phone I lqoo 5g Phones I Oneplus 5g Phones I Vivo 5g Phones I Oppo 5g Smart Phones I Oppo F15 I Oppo A31 I Samsung A71 I Samsung A51 <br>
+            I Samsung A31 I 4G Mobile I Nokia Mobile I Samsung Mobile I iphone I Oppo Mobile I Vivo Mobile
+            </span>
+         </div>
+              
+         <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+            <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">CAMERA </span>   
+            <span style="font-size: 8; color: rgb(51, 45, 45);">
+                 GoPro Action Camera I Nikon Camera I Canon Camera I Sony Camera I Canon DSLR I Nikon DSLR 
+             </span>   
+        </div>
+         <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+            <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">LAPTOPS  </span>   
+            <span style="font-size: 8; color: rgb(51, 45, 45);">
+                 Asus ROG Ally I MacBook Pro M2 I Premium Laptop I ASUS ROG Strix SCAR 16 (2023) Core i9 13th Gen I ASUS ROG Zephyrus M16 (2023) Core i9 13th Gen I ASUS Zenbook 14 OLED (2022) I Realme Book Prime Core i5 11th Gen <br>
+                 I Microsoft Surface Go Pentium 128GB I Apple Laptops I Acer Laptops I Lenovo Laptops I Dell Laptops I Asus Laptops I HP Laptops I Gaming Laptops 12 in 1 Laptops I Laptops I Dell latest laptops 20221 HP latest laptops 2022 I Infinix INBook Y1 Plus <br>
+                 I SAMSUNG Galaxy Book3 112th Gen Intel Core Laptops
+             </span>   
+        </div>
+         <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+            <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);"> TVS  </span>   
+            <span style="font-size: 8; color: rgb(51, 45, 45);">
+                Nokia TV I Panasonic TV I Thomson TV I Mi X Pro I Realme TV I Motorola TV I OnePlus TVs I LG TV I TV I Sony TV I Samsung TV I Android Television I Iffalcon Tv I Mi TV 
+                
+             </span>   
+        </div>
+         <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+            <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">LARGE APPLIANCES:  </span>   
+            <span style="font-size: 8; color: rgb(51, 45, 45);">
+                 Television I Washing Machines I Refrigerators I Air Conditioners I Electric Cookers I Electric Jug(Heater) / Travel Kettles I Induction Cooktops I Inverters / stabilizer I Irons / Iron Box I Mixer Grinder Juicer I Wet Grinders I Chimneys I Microwave Ovens I Vacuum Cleaners I 
+                 Water Purifier I Fan 
+             </span>   
+        </div>
+         <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+            <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">CLOTHING   </span>   
+            <span style="font-size: 8; color: rgb(51, 45, 45);">
+                Sarees I Green bridal lehenga I Tops I Apron for Doctors I Shoes I Sunglasses I Bridal Blouse I Half saree blouse designs I Designer blouses I Blouse designs I Shirts I Cotton saree blouse designs I Tshirts I Jeans I Dresses I One pieces I <br>
+                Groom wedding sherwani I Designer Salwar Suits I Bra I Cotton simple blouse designs I Banarasi saree blouse designs I Stylish blouse astin design I Track Pant I Blouse neck designs I Kurtas I Party Dresses I Palazzo Suits I Anarkali I Gowns I Cut out dress <br>
+                I Salwar Suits I Kurtis I Designer Sarees I Leggings I Shorts I Georgette Sarees I Ethnic Wear I uppada pattu sarees I Blouse back design I Jodhpur pants 
+             </span>   
+        </div>
+         <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+            <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">FOOTWEAR:  </span>   
+            <span style="font-size: 8; color: rgb(51, 45, 45);">
+                 Adidas Shoes I Reebok Shoes I Nike Shoes I Puma Shoes I Boots I Bata Shoes I Woodland Shoes I Skechers Shoes I Sneakers I Womens Boots I Sports Shoes I Loafers I Sandals I Lotto Sports Shoes I Casual Shoes I Womens Skechers Shoes I Asics Sports Shoes I Formal Shoes I School Shoes 
+             </span>   
+        </div>
+         <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+            <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">GROCERIES </span>   
+            <span style="font-size: 8; color: rgb(51, 45, 45);">
+                 PhonePe Grocery Voucher I Hand Wash I Soap I Cashew Nuts I Sunflower Oil I Eggs I Toilet Cleaner I Harpic Toilet Cleaner I Dettol Soap I Mustard Oil I Biscuits I Cheese I Patanjali Atta I Fortune Oil I Aashirvaad Atta I Tea 
+             </span>   
+        </div>
+         <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+            <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">BEST SELLING ON FLIPKART  </span>   
+            <span style="font-size: 8; color: rgb(51, 45, 45);">
+                 Headphones I Best Gas Geyser I Kitchen Geyser I Nutri Blenders I Portable Air Cooler I Best Air Cooler I Bags I Hitachi Refrigerator 3 Door I Books I Toys I Candles I Helmets I Wall Clocks I Baby Food I Chocolates I<br>
+                  Cycles I Calculators I Lipsticks I Mask  I Vertiv UPS I Fastrack Watches I Wallets I Earrings I Gold Coins I Realme Pad Mini I Handbags I conekt SW2 Smartwatch I Mivi DuoPods a350 I Speaker Cleaner  
+             </span>   
+        </div>
+         <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+            <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">FURNITURE </span>   
+            <span style="font-size: 8; color: rgb(51, 45, 45);">
+                 Furniture I Sofas I Beds I Dining sets I Wardrobes I Mattresses I TV Units I Tables I Chairs I Shelves I Bean Ba s Office Chairs I Computer Table I Office Tables I Red Sofa I Wakefit Beds I White Sofa I Wakefit Mattress I Green Sofa I Black Sofa I Brown Sofa 
+             </span>   
+        </div>
+         <div style="margin-top: 10px; margin-left: -20px; line-height: 13px; word-spacing: 1px;">
+            <span style="font-size: 10; font-weight: 400; color: rgb(90, 80, 80);">BGMH:  </span>   
+            <span style="font-size: 8; color: rgb(51, 45, 45);">
+                 Shampoo I Whey Protein I Homeopathy I Cricket I Cycles I Footballs I Treadmills I Christmas Gifts I Fitness A Drinks I Toys I Milk Drink Mixes I Chyawanprash I Indian Flag I Protein Supplements 
+                 I Books Store I Musical Instrument Store I Dabur Chyawanprash I Baidyanath Chyawanprash I Energy 
+        
+             </span>   
+        </div>
+        
+        
+            </div>
+        
+        </div>
+        
+        <!-- footer2 -->
+        
+        <div class="container-fluid " style="height: 250px; width: 1000; background: rgb(36, 36, 39);">
+            <div class="d-flex flex-lg-row">
+        <div class="col-7 d-flex mx-3 flex-lg-row ">
+            <div style="margin: 30px 10px 20px 20px;" class="d-flex flex-column">
+                <span style="font-size: 10px; color: rgb(160, 155, 155); margin-bottom: 8px;">ABOUT</span>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Contact Us</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">About Us</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Careers</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Flipkart Stories</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Press</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Corporate Information</a>
+            </div>
+            
+            <div style="margin: 30px 10px 20px 20px;" class="d-flex flex-column px-4">
+                <span style="font-size: 10px; color: rgb(160, 155, 155); margin-bottom: 8px;">GROUP COMPANIES</span>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Myntra</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Cleartrip</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Shopsy</a>
+                </div>
+            <div style="margin: 30px 10px 20px 20px;" class="d-flex flex-column px-2">
+                <span style="font-size: 10px; color: rgb(160, 155, 155); margin-bottom: 8px;">HELP</span>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Payment</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Shipping</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Cancellation & Refund</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">FAQ</a>
+                </div>
+            <div style="margin: 30px 10px 20px 20px;" class="d-flex flex-column mx-2 px-3">
+                <span style="font-size: 10px; color: rgb(160, 155, 155); margin-bottom: 8px;">CONSUMER POLICY</span>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Cancellation & Refund</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Terms of Use</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Security</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Sitemap</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">Grivance Redressal</a>
+                <a href="#" class="footer link-underline link-underline-opacity-0">EPR Compliance</a>
+                </div>
+        
+        
+        </div>
+        <div style="height: 150px; width: 0.5px; background-color: gray; margin-top: 30px; margin-left: -10px;"></div>
+        
+        <div class="col-4 d-flex">
+            <div style="margin: 30px 0px 0px 0px; width: 380px;" class="d-flex flex-column px-4">
+                <span style="font-size: 8px; color: rgb(160, 155, 155); margin-bottom: 8px;">Mail Us</span>
+                <span class="footer0">
+                    Flipkart Internet Private Limited, <br>
+                    Buildings Alyssa, Begonia & <br>
+                    Clove Embassy Tech Village, <br>
+                    Outer Ring Road, Devarabeesanahalli Village, <br>
+                    Bengaluru, 560103,<br> Karnataka, India
+                </span>
+                <span style="font-size: 8px; color: rgb(160, 155, 155); margin-bottom: 5px; margin-top: 10px;">Social :</span>
+        
+                <div>
+                    <img src="./images/facebook.svg" alt="" height="16" width="16">
+                    <img src="./images/twitter.svg" alt="" height="16" width="16" class="mx-2">
+                    <img src="./images/youtube.svg" alt="" height="16" width="16">
+                    <img src="./images/insta.svg" alt="" height="15" width="15"  class="mx-2" style="filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg);
+        ">
+                </div>
+                
+            </div>
+                <div style="margin: 30px -30px 20px 10px; width: 380;" class="d-flex flex-column px-4">
+                    <span style="font-size: 8px; color: rgb(160, 155, 155); margin-bottom: 8px;">Registered Office Address</span>
+                    <span class="footer0">
+                        Flipkart Internet Private Limited, <br>
+                        Buildings Alyssa, Begonia & <br>
+                        Clove Embassy Tech Village, <br>
+                        Outer Ring Road, Devarabeesanahalli Village, <br>
+                        Bengaluru, 560103,<br> Karnataka, India <br>
+                        CIN : U51109KA2012PTC066107 <br>
+                        Telephone : <span style="color: blue; ">044-45614700 / 044-67415800</span>
+        
+                    </span>    
+                
+                </div>    
+        </div>
+        </div>
+        <div style="height: 0.5px; width: 1000px; background-color: gray; margin-top: 20px; margin-left: -12; "></div>
+        
+        <div class="d-flex">
+          <div class="py-1 " style="margin-left: 60px;">
+        <img src="./images/seller.svg" alt="" height="8" width="8" style="filter: sepia(100%) saturate(500%) hue-rotate(20deg) brightness(5.5);">
+        <span style="color: white; font-size: 8px;">Become a Seller</span>
+          </div>
+          <div class="py-1 " style="margin-left: 60px;">
+        <img src="./images/advertise.svg" alt="" height="8" width="8" style="filter: sepia(100%) saturate(500%) hue-rotate(20deg) brightness(5.5);">
+        <span style="color: white; font-size: 8px;">Advertise</span>
+          </div>
+          <div class="py-1 " style="margin-left: 60px;">
+        <img src="./images/rewards.svg" alt="" height="8" width="8" style="filter: sepia(100%) saturate(500%) hue-rotate(20deg) brightness(5.5);">
+        <span style="color: white; font-size: 8px;">Gift Cards</span>
+          </div>
+          <div class="py-1 " style="margin-left: 60px;">
+        <img src="./images/help.svg" alt="" height="8" width="8" style="filter: sepia(100%) saturate(500%) hue-rotate(20deg) brightness(5.5);">
+        <span style="color: white; font-size: 8px;">Help</span>
+          </div>
+        
+          <span style="color: white; font-size: 8px; margin-left: 65px; margin-top: 12px;"  >©2007-2025 Flipkart.com</span>
+          <img src="./images/visa.svg" alt="" height="55" width="260"   style="margin-left: 70px; margin-top: -10px;">
+        </div>
+        
+        </div>
+        
 </div>
-</div>
-<div style="height: 0.5px; width: 1000px; background-color: gray; margin-top: 20px; margin-left: -12; "></div>
-
-<div class="d-flex">
-  <div class="py-1 " style="margin-left: 60px;">
-<img src="./images/seller.svg" alt="" height="8" width="8" style="filter: sepia(100%) saturate(500%) hue-rotate(20deg) brightness(5.5);">
-<span style="color: white; font-size: 8px;">Become a Seller</span>
-  </div>
-  <div class="py-1 " style="margin-left: 60px;">
-<img src="./images/advertise.svg" alt="" height="8" width="8" style="filter: sepia(100%) saturate(500%) hue-rotate(20deg) brightness(5.5);">
-<span style="color: white; font-size: 8px;">Advertise</span>
-  </div>
-  <div class="py-1 " style="margin-left: 60px;">
-<img src="./images/rewards.svg" alt="" height="8" width="8" style="filter: sepia(100%) saturate(500%) hue-rotate(20deg) brightness(5.5);">
-<span style="color: white; font-size: 8px;">Gift Cards</span>
-  </div>
-  <div class="py-1 " style="margin-left: 60px;">
-<img src="./images/help.svg" alt="" height="8" width="8" style="filter: sepia(100%) saturate(500%) hue-rotate(20deg) brightness(5.5);">
-<span style="color: white; font-size: 8px;">Help</span>
-  </div>
-
-  <span style="color: white; font-size: 8px; margin-left: 65px; margin-top: 12px;"  >©2007-2025 Flipkart.com</span>
-  <img src="./images/visa.svg" alt="" height="55" width="260"   style="margin-left: 70px; margin-top: -10px;">
-</div>
-
-</div>
-
 
 <script src="./js/js.js"></script>
 </body>
