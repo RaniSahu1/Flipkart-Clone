@@ -9,8 +9,10 @@ This project replicates the design and layout of Flipkart’s homepage, includin
 
 ## 📸 Screenshots
 
-![Screenshot](Screenshot-1.png)  
-*(Add a screenshot of your homepage here – take one and save as `screenshot.png` in the repo)*
+(Screenshot-1.png)  
+(Screenshot-2.png)  
+(Screenshot-3.png)  
+
 
 ---
 
@@ -29,6 +31,7 @@ This project replicates the design and layout of Flipkart’s homepage, includin
 - **Bootstrap 5**  
 
 ---
+
 
 
 
